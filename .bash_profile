@@ -76,7 +76,11 @@ alias gk="gitk --all & disown -h"
 alias gitk="gk"
 alias gg="git grep --color=always"
 alias gcp='git cherry-pick'
+alias grc='git rebase --continue'
+alias gha='git log --pretty=format:"%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s" --date=short --name-status HEAD^^^^^..HEAD'
+alias ghm='git log --author="Mina Doroudi" --pretty=format:"%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s" --date=short -status HEAD^^^^^..HEAD'
 alias fs='cd ~/work/balanegarak'
+alias pin='cd ~/work/pinterest/pinterest_crawler'
 source ~/.git-completion.sh
 if [ -f /opt/local/etc/bash_completion ]; then
     . /opt/local/etc/bash_completion
