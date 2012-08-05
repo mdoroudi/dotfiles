@@ -14,7 +14,12 @@ set hlsearch
 set autoindent
 set cul 
 set sm  
+set tabstop=2
+set undolevels=1000
 nmap ; : 
+":set gfn=* to see list of all available fonts and chagne it there
+":set gfn to see what it changed to to set it here
+set gfn=Monaco:h12
 
 syntax on
 
