@@ -8,9 +8,10 @@ set ml
 set nu
 set ic
 set is
-color desert
+color delek
 set fdm=syntax
 set hlsearch
+set autoindent
 set cul 
 
 nmap ; : 
@@ -35,6 +36,7 @@ Bundle 'ack.vim'
 Bundle 'kchmck/vim-coffee-script.git'
 Bundle 'ctrlp.vim'
 "call pathogen#infect()
+Bundle "scrooloose/nerdcommenter"
 
 filetype plugin indent on
 
