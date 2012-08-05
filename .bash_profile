@@ -24,6 +24,7 @@ if [ "$TERM" != "dumb" ]; then
 fi
 
 # Useful aliases
+alias mvim='/Applications/MacVim.app/mvim'
 alias ls='ls $LS_OPTIONS -hF'
 alias ll='ls $LS_OPTIONS -lhF'
 alias l='ls $LS_OPTIONS -lAhF'
