@@ -13,7 +13,7 @@ set fdm=syntax
 set hlsearch
 set autoindent
 set cul 
-
+set sm  
 nmap ; : 
 
 syntax on
