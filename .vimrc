@@ -16,6 +16,16 @@ set cul
 set sm  
 set tabstop=2
 set undolevels=1000
+"disable all blinking"
+set guicursor+=n-v-c:blinkon0 
+"set insert cursor to thin -> 25% width"
+set guicursor+=i:ver25-iCursor 
+"set insert cursor color to black"
+highlight iCursor guifg=black guibg=black 
+"cursor color"
+highlight Cursor guibg=gray
+"remove the line across for cursor"
+set nocursorline
 nmap ; : 
 ":set gfn=* to see list of all available fonts and chagne it there
 ":set gfn to see what it changed to to set it here
