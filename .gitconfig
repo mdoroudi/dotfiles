@@ -1,0 +1,20 @@
+[user]
+	name = Mina Doroudi
+	email = mina.doroudi@gmail.com
+[alias]
+	co = checkout
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	color = always
+[core]
+	excludesfile = /Users/mina_doroudi/.gitignore
+	autocrlf = input
+	editor = vi 
+[apply]
+	whitespace = nowarn
+[format]
+	pretty = %C(yellow)%h%Creset %s %C(red)(%cr)%Creset
+[github]
+	user = mdoroudi
