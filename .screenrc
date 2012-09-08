@@ -1,2 +1,22 @@
-caption always
+# to look for more examples of things todo
+# https://parasol.tamu.edu/people/jack/nd80usa/home/ND80serv/cfengine/etc/screenrc
+# http://www.opensource.apple.com/source/screen/screen-3/screen/etc/screenrc
+
+
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
+
+# scrollback buffer size
+defscrollback 7000
+
+termcapinfo xterm 'hs'
+caption always "%{= kw}%-w%{= BW}%n %t%{-}%+w %-= @%H - %LD %d %LM - %c"
+
+# no audiobell
+vbell on
+
+# detach on hangup
+autodetach on
+
+# don't show copywrite
+startup_message off
 
