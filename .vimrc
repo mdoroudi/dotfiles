@@ -16,6 +16,7 @@ set cul
 set sm  
 set tabstop=2
 set undolevels=1000
+set noswapfile
 "disable all blinking"
 "set guicursor+=n-v-c:blinkon0 
 ""set insert cursor to thin -> 25% width"
