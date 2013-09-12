@@ -55,4 +55,6 @@ Bundle 'ctrlp.vim'
 Bundle "scrooloose/nerdcommenter"
 
 filetype plugin indent on
-
+if has("gui_running")
+    set guioptions=egmrt
+endif

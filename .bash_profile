@@ -5,8 +5,9 @@ shopt -s histappend
 
 ulimit -n 1024
 
-export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin/:$PATH"
+export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:$PATH"
 export MANPATH="/usr/local/man:/usr/local/share/man:/opt/local/share/man:$MANPATH"
+export JAVA_HOME='/Library/Java/Home'
 
 # Terminal colors (requires GNU coreutils)
 #NM="\[\033[0;38m\]" # no background and white lines
@@ -54,8 +55,9 @@ alias gcp='git cherry-pick'
 alias grc='git rebase --continue'
 alias gha='git log --pretty=format:"%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s" --date=short --name-status HEAD^^^^^..HEAD'
 alias ghm='git log --author="Mina Doroudi" --pretty=format:"%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s" --date=short -status HEAD^^^^^..HEAD'
-alias fs='cd ~/work/balanegarak'
-alias pin='cd ~/work/pinterest/pinterest_crawler'
+alias fs='cd /Users/minadoroudi/work/Outsidekick'
+alias and='cd ~/Documents/workspace/Soduko'
+alias pin='cd ~/work/pinterest_crawler'
 source ~/.git-completion.sh
 if [ -f /opt/local/etc/bash_completion ]; then
     . /opt/local/etc/bash_completion
@@ -69,9 +71,8 @@ function parse_git_branch {
 }
 
 export PS1='\[\e[1;31m\][\w\[\e[m\]\[\e[1;31m\]]\[\e[1;34m\]$(parse_git_branch)\[\e[0;30m\]'
-export JAVA_HOME='/usr/bin/java'
 if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
-export DYLD_LIBRARY_PATH=/usr/local/mysql/lib/
+export DYLD_LIBRARY_PATH=/usr/local/mysql/lib
