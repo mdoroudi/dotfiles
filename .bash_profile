@@ -24,7 +24,7 @@ if [ "$TERM" != "dumb" ]; then
 fi
 
 # Useful aliases
-alias mvim='/Applications/MacVim.app/mvim'
+alias mvim='/usr/local/bin/mvim'
 alias ls='ls $LS_OPTIONS -hF'
 alias ll='ls $LS_OPTIONS -lhF'
 alias l='ls $LS_OPTIONS -lAhF'
@@ -55,16 +55,17 @@ alias gcp='git cherry-pick'
 alias grc='git rebase --continue'
 alias gha='git log --pretty=format:"%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s" --date=short --name-status HEAD^^^^^..HEAD'
 alias ghm='git log --author="Mina Doroudi" --pretty=format:"%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s" --date=short -status HEAD^^^^^..HEAD'
-alias fs='cd /Users/minadoroudi/work/Outsidekick'
+alias fs='cd /Users/minadoroudi/work/home_grown'
 alias and='cd ~/Documents/workspace/Soduko'
 alias pin='cd ~/work/pinterest_crawler'
 source ~/.git-completion.sh
 if [ -f /opt/local/etc/bash_completion ]; then
     . /opt/local/etc/bash_completion
 fi
+source ~/.profile
 
 function parse_git_dirty {
-  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
+  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "*"
 }
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
@@ -76,3 +77,4 @@ if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
 export DYLD_LIBRARY_PATH=/usr/local/mysql/lib
+alias pg="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log"
